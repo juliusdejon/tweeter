@@ -1,6 +1,6 @@
 // assets/js/app.tsx
 
-import '../css/app.css'
+import '../css/app.scss'
 
 import 'phoenix_html'
 
