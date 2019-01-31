@@ -15,7 +15,7 @@ defmodule TweeterWeb.Router do
   scope "/", TweeterWeb do
     pipe_through :browser
 
-    get "/", PageController, :index
+    get "/*path", PageController, :index
     post "/", PageController, :create
   end
 
