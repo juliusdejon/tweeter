@@ -9,3 +9,17 @@ services:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
     container_name: postgres
+    networks: 
+      - shore
+  tweeter:
+    image: tweeter:latest
+    ports:
+      - 8080:4000
+    depends_on: 
+      - postgres
+    container_name: tweeter_web
+    networks: 
+      - shore
+networks:
+  shore:
+    external: true
